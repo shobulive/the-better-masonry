@@ -6,6 +6,7 @@ export default class Column extends React.Component {
   render() {
     return (
       <FlatList
+        {...this.props}
         style={{ flex: 1, paddingRight: this.props.spacingRight }}
         data={this.props.data}
         renderItem={this.props.renderItem}
@@ -17,6 +18,7 @@ export default class Column extends React.Component {
         maxToRenderPerBatch={this.props.maxToRenderPerBatch}
         onScroll={this.props.onScroll}
         showsVerticalScrollIndicator={false}
+        onEndReached={this.props.onEndReached}
       />
     );
   }

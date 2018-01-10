@@ -22,13 +22,7 @@ export default class MainComponent extends React.Component {
   }
   render() {
     return (
-      <View
-        style={[
-          { flex: 1, flexDirection: "row", padding: 16 },
-          this.props.style
-        ]}
-        {...this.props}
-      >
+      <View style={{ flex: 1, flexDirection: "row" }}>
         {Object.values(this.data).map((value, index) => {
           return (
             <Column
@@ -43,6 +37,7 @@ export default class MainComponent extends React.Component {
                   ? this.props.spacingRight
                   : 0
               }
+              onEndReached={this.props.onEndReached}
               data={value}
               renderItem={this.props.renderItem}
               key={Math.random() * 10}
@@ -66,7 +61,8 @@ MainComponent.propTypes = {
   noOfColumns: PropTypes.number,
   spacingRight: PropTypes.number,
   maxToRenderPerBatch: PropTypes.number,
-  renderItem: PropTypes.func
+  renderItem: PropTypes.func,
+  onEndReached: PropTypes.func
 };
 MainComponent.defaultProps = {
   data: [],
@@ -74,5 +70,6 @@ MainComponent.defaultProps = {
   noOfColumns: 1,
   spacingRight: 0,
   maxToRenderPerBatch: 5,
-  renderItem: () => {}
+  renderItem: () => {},
+  onEndReached: () => {}
 };
