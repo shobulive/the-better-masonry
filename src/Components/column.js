@@ -1,7 +1,6 @@
-import React from "react";
-import { FlatList } from "react-native";
-import PropTypes from "prop-types";
-import Test from "../../Test/item";
+import React from 'react';
+import { FlatList } from 'react-native';
+import PropTypes from 'prop-types';
 export default class Column extends React.Component {
   render() {
     return (
