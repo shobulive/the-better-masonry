@@ -1,7 +1,7 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import PropTypes from 'prop-types';
-
+import Column from '../Component';
 export default class MainComponent extends React.Component {
   data = {};
   ref = {};
@@ -32,18 +32,23 @@ export default class MainComponent extends React.Component {
             this.props.onEndReached();
           }
         }}
-        style={{ flex: 1, flexDirection: 'row', width: '100%' }}
+        scrollEventThrottle={200000}
         {...this.props}
+        style={{ flex: 1 }}
       >
-        {Object.values(this.data).map((value, index) => {
-          return (
-            <View style={{ flex: 1 }}>
-              {value.map((value, index) => {
-                return this.props.renderItem(value);
-              })}
-            </View>
-          );
-        })}
+        <View style={{ flex: 1, flexDirection: 'row' }}>
+          {Object.values(this.data).map((value, index) => {
+            return (
+              <View
+                style={{
+                  flex: 1
+                }}
+              >
+                <Column renderItem={this.props.renderItem} value={value} />
+              </View>
+            );
+          })}
+        </View>
       </ScrollView>
     );
   }

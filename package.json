@@ -20,6 +20,27 @@
         }
       },
       "/Users/shubham/Sites/projects/rituals-consumer-app"
+    ],
+    [
+      {
+        "raw": "the-better-masonry@git+https://github.com/shubham56/the-better-masonry.git",
+        "scope": null,
+        "escapedName": "the-better-masonry",
+        "name": "the-better-masonry",
+        "rawSpec": "git+https://github.com/shubham56/the-better-masonry.git",
+        "spec": "git+https://github.com/shubham56/the-better-masonry.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:shubham56/the-better-masonry.git",
+          "sshUrl": "git+ssh://git@github.com/shubham56/the-better-masonry.git",
+          "httpsUrl": "git+https://github.com/shubham56/the-better-masonry.git",
+          "gitUrl": "git://github.com/shubham56/the-better-masonry.git",
+          "shortcut": "github:shubham56/the-better-masonry",
+          "directUrl": "https://raw.githubusercontent.com/shubham56/the-better-masonry/master/package.json"
+        }
+      },
+      "/Users/shubham/Sites/projects/rituals-consumer-app"
     ]
   ],
   "_from": "git+https://github.com/shubham56/the-better-masonry.git",
@@ -48,8 +69,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "git+https://github.com/shubham56/the-better-masonry.git#2189799ec0061e05b9088eb63d73b2e152543257",
-  "_shasum": "a5f6004e7028237069d048541e220d85cde971e2",
+  "_resolved": "git+https://github.com/shubham56/the-better-masonry.git#0fdaebc7ef164a6313d29bbf6ee56a9dd577e2b4",
+  "_shasum": "59eabe370750184757f698e2cb50ef3f4c311029",
   "_shrinkwrap": null,
   "_spec": "the-better-masonry@git+https://github.com/shubham56/the-better-masonry.git",
   "_where": "/Users/shubham/Sites/projects/rituals-consumer-app",
