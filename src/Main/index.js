@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Column from '../Component';
 export default class MainComponent extends React.Component {
   data = {};
-  ref = {};
   componentWillMount() {
     for (let j = 0; j < this.props.noOfColumns; j++) {
       this.data['col' + j] = [];
@@ -23,18 +22,19 @@ export default class MainComponent extends React.Component {
     return (
       <ScrollView
         onScroll={e => {
-          let paddingToBottom = 10;
+          this.props.setOffset(e.nativeEvent.contentOffset.y);
+          let paddingToBottom = 0;
           paddingToBottom += e.nativeEvent.layoutMeasurement.height;
           if (
-            e.nativeEvent.contentOffset.y >=
+            e.nativeEvent.contentOffset.y ==
             e.nativeEvent.contentSize.height - paddingToBottom
           ) {
             this.props.onEndReached();
           }
         }}
-        scrollEventThrottle={200000}
+        scrollEventThrottle={16}
         {...this.props}
-        style={{ flex: 1 }}
+        style={[{ flex: 1 }, this.props.style]}
       >
         <View style={{ flex: 1, flexDirection: 'row' }}>
           {Object.values(this.data).map((value, index) => {
@@ -58,12 +58,16 @@ MainComponent.propTypes = {
   renderItem: PropTypes.func,
   noOfColumns: PropTypes.number,
   renderItem: PropTypes.func,
-  onEndReached: PropTypes.func
+  onEndReached: PropTypes.func,
+  setOffset: PropTypes.func,
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.number])
 };
 MainComponent.defaultProps = {
   data: [],
   renderItem: () => {},
   noOfColumns: 1,
   renderItem: () => {},
-  onEndReached: () => {}
+  onEndReached: () => {},
+  setOffset: () => {},
+  style: {}
 };
