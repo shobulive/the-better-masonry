@@ -18,6 +18,20 @@ export default class MainComponent extends React.Component {
       }
     }
   }
+  componentWillUpdate() {
+    for (let j = 0; j < this.props.noOfColumns; j++) {
+      this.data['col' + j] = [];
+    }
+    if (this.props.data) {
+      for (let i = 0; i < this.props.data.length; i++) {
+        for (let k = 0; k < this.props.noOfColumns; k++) {
+          if (i % this.props.noOfColumns === k) {
+            this.data['col' + k].push(this.props.data[i]);
+          }
+        }
+      }
+    }
+  }
   render() {
     return (
       <ScrollView
