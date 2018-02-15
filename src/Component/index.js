@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
-export default class MainComponent extends React.Component {
+export default class Column extends React.Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
@@ -13,7 +13,7 @@ export default class MainComponent extends React.Component {
     );
   }
 }
-MainComponent.propTypes = {
+Column.propTypes = {
   value: PropTypes.array,
   renderItem: PropTypes.func
 };
