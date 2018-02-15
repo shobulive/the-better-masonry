@@ -1,2 +1,4 @@
-import MainComponent from "./src/Main";
-export default MainComponent;
+import { AppRegistry } from 'react-native';
+import App from './App';
+
+AppRegistry.registerComponent('theBetterMasonary', () => App);
