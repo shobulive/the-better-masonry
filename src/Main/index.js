@@ -57,6 +57,7 @@ export default class MainComponent extends React.Component {
                 style={{
                   flex: 1
                 }}
+                key={Math.random()*10000000000}
               >
                 <Column renderItem={this.props.renderItem} value={value} />
               </View>
