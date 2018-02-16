@@ -59,7 +59,11 @@ export default class MainComponent extends React.Component {
                 }}
                 key={JSON.stringify(value)}
               >
-                <Column key={Math.random()*10000000} renderItem={this.props.renderItem} value={value} />
+                <Column
+                  key={Math.random() * 10000000}
+                  renderItem={this.props.renderItem}
+                  value={value}
+                />
               </View>
             );
           })}
@@ -75,7 +79,7 @@ MainComponent.propTypes = {
   renderItem: PropTypes.func,
   onEndReached: PropTypes.func,
   setOffset: PropTypes.func,
-  style: View.propTypes.style
+  style: PropTypes.any
 };
 MainComponent.defaultProps = {
   data: [],
