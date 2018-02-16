@@ -17,7 +17,7 @@ Column.propTypes = {
   value: PropTypes.array,
   renderItem: PropTypes.func
 };
-MainComponent.defaultProps = {
+Column.defaultProps = {
   value: [],
   renderItem: () => {}
 };
