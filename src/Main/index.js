@@ -60,7 +60,7 @@ export default class MainComponent extends React.Component {
                 key={JSON.stringify(value)}
               >
                 <Column
-                  key={Math.random() * 10000000}
+                  key={JSON.stringify(value) + index}
                   renderItem={this.props.renderItem}
                   value={value}
                 />
