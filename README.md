@@ -1,6 +1,6 @@
 # The better-Masonry
 
-Fully customizable Masonry layout at your service.
+Fully customizable Masonry layout for react-native.
 
 ## To use this package
 
