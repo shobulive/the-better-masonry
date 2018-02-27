@@ -1,4 +1,4 @@
-# The better-Masonry
+# The-Better-Masonry
 
 Fully customizable Masonry layout for react-native.
 
