@@ -18,14 +18,8 @@ Fully customizable Masonry layout at your service.
 
 > import Masonry from "the-better-masonry";
 
-**PROPS**
-: PropTypes.array,
-  renderItem: PropTypes.func,
-  noOfColumns: PropTypes.number,
-  renderItem: PropTypes.func,
-  onEndReached: PropTypes.func,
-  setOffset: PropTypes.func,
-  style: PropTypes.any
+**PROPS**,
+
 | Name               | Type            | Default | Description                                                                             |
 | ------------------ | --------------- | ------- | --------------------------------------------------------------------------------------- |
 | data               | array           |   []    | Input Data                                                                              |
