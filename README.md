@@ -40,7 +40,7 @@ Fully customizable Masonry layout at your service.
     renderItem={(item) => (<Text>{item}</Text>)}
   />
 ```
-**note**
+**Note:**
 **always use odd number of items in the data array**
 
 ## Credits
