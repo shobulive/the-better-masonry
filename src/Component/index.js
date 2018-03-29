@@ -7,7 +7,7 @@ export default class Column extends React.Component {
     return (
       <View style={{ flex: 1 }}>
         {this.props.value.map((item, index) => {
-          return this.props.renderItem(item);
+          return this.props.renderItem(item, index);
         })}
       </View>
     );
@@ -19,5 +19,5 @@ Column.propTypes = {
 };
 Column.defaultProps = {
   value: [],
-  renderItem: () => {}
+  renderItem: () => { }
 };
