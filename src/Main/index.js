@@ -4,28 +4,14 @@ import PropTypes from 'prop-types';
 import Column from '../Component';
 export default class Masonry extends React.Component {
   data = {};
-  componentWillMount() {
-    for (let j = 0; j < this.props.noOfColumns; j++) {
+  componentWillReceiveProps(nextProps) {
+    for (let j = 0; j < nextProps.noOfColumns; j++) {
       this.data['col' + j] = [];
     }
-    if (this.props.data) {
-      for (let i = 0; i < this.props.data.length; i++) {
-        for (let k = 0; k < this.props.noOfColumns; k++) {
-          if (i % this.props.noOfColumns === k) {
-            this.data['col' + k].push(this.props.data[i]);
-          }
-        }
-      }
-    }
-  }
-  componentWillUpdate() {
-    for (let j = 0; j < this.props.noOfColumns; j++) {
-      this.data['col' + j] = [];
-    }
-    if (this.props.data) {
-      for (let i = 0; i < this.props.data.length; i++) {
-        for (let k = 0; k < this.props.noOfColumns; k++) {
-          if (i % this.props.noOfColumns === k) {
+    if (nextProps.data) {
+      for (let i = 0; i < nextProps.data.length; i++) {
+        for (let k = 0; k < nextProps.noOfColumns; k++) {
+          if (i % nextProps.noOfColumns === k) {
             this.data['col' + k].push(this.props.data[i]);
           }
         }
@@ -63,6 +49,7 @@ export default class Masonry extends React.Component {
                   key={JSON.stringify(value) + index}
                   renderItem={this.props.renderItem}
                   value={value}
+                  index={index}
                 />
               </View>
             );
