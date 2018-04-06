@@ -6,15 +6,13 @@ Fully customizable Masonry layout for react-native.
 
 **1. Add this to packgage.json of your project**
 
-> $ "the-better-masonry":"git+https://github.com/sahusoftcom/the-better-masonry.git"
+> $ "the-better-masonry":"git+https://github.com/shubham56/the-better-masonry.git"
 
 **2. Run the following command in your project directory**
 
 > $ npm install
 
 **3. How to use**
-
-### #1 Page Switch Animation
 
 > import Masonry from "the-better-masonry";
 
